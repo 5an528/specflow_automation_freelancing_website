@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net5.0</TargetFrameworks>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Drivers\**" />
+		<EmbeddedResource Remove="Drivers\**" />
+		<None Remove="Drivers\**" />
+		<SpecFlowFeatureFiles Remove="Drivers\**" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Drivers\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Hooks\CalculatorHooks.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="D:\Foyjul Bary\Repository\Demo\Plugins\/../LICENSE" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ExtentReports" Version="4.1.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+		<PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="100.0.4896.6000" />
+		<PackageReference Include="Selenium.WebDriver.IEDriver" Version="4.0.0.1" />
+		<PackageReference Include="SpecFlow.Actions.Selenium" Version="0.1.290" />
+		<PackageReference Include="SpecFlow.xUnit" Version="3.*" />
+		<PackageReference Include="xunit.assert" Version="2.4.1" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="FluentAssertions" Version="6.5.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="specflow.actions.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Update="Nerdbank.GitVersioning" Version="3.4.255" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Reports\" />
+	</ItemGroup>
+
+
+</Project>
